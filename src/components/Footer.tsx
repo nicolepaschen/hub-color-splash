@@ -3,13 +3,12 @@ import { Phone } from "lucide-react";
 const Footer = () => {
   const footerSections = {
     "Products & Solutions": [
-      "Shared Hosting",
-      "WordPress Hosting", 
-      "VPS Hosting",
-      "Dedicated Servers",
+      "BoldGrid Website Builder",
+      "Hosting Services", 
+      "Hosting Plans",
       "Domain Names",
-      "Website Builder",
-      "SSL Certificates"
+      "Host your Blog",
+      "eCommerce Hosting"
     ],
     "Applications Hosting": [
       "WordPress",
