@@ -5,42 +5,42 @@ const FeatureHighlights = () => {
     {
       icon: Globe,
       title: "Create My First Website",
-      subtitle: "WordPress / BoldGrid"
+      subtitle: "Non-Technical install for WordPress and BoldGrid."
     },
     {
       icon: Mail,
       title: "Secure Business Email",
-      subtitle: "unlimited"
+      subtitle: "Provided with unlimited email accounts to safely run your business online."
     },
     {
       icon: Shield,
       title: "FREE Domain",
-      subtitle: "with purchase"
+      subtitle: "Choose a domain name that fits your business. Sign up today to get a free domain credit."
     },
     {
       icon: ShoppingBag,
       title: "Set Up My eCommerce Shop",
-      subtitle: "1-Click Auto-Install"
+      subtitle: "A 1-Click Auto-Install will instantly create your eCommerce shop."
     },
     {
       icon: Settings,
       title: "Website Management",
-      subtitle: "cPanel"
+      subtitle: "cPanel, is the web's most trusted control panel and is already included."
     },
     {
       icon: Shield,
       title: "FREE SSL",
-      subtitle: "security included"
+      subtitle: "Sign up today for a free SSL certificate. Show your visitors that your site is trustworthy."
     },
     {
       icon: Zap,
       title: "Quick Website Speed",
-      subtitle: "SSD"
+      subtitle: "Faster websites increase conversion rates and user engagement with SSDs."
     },
     {
       icon: ArrowRightLeft,
       title: "Migrate My Website For Me",
-      subtitle: "zero-downtime"
+      subtitle: "Zero downtime transfers will make your migration stress-free."
     }
   ];
 
