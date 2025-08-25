@@ -25,7 +25,19 @@ const FeatureHighlights = () => {
     {
       icon: Settings,
       title: "Website Management",
-      subtitle: "cPanel, is the web's most trusted control panel and is already included."
+      subtitle: (
+        <>
+          <a 
+            href="https://www.webhostinghub.com/cpanel-hosting" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-primary hover:text-primary/80 transition-colors underline"
+          >
+            cPanel
+          </a>
+          , is the web's most trusted control panel and is already included.
+        </>
+      )
     },
     {
       icon: Shield,
