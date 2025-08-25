@@ -42,9 +42,9 @@ const Header = () => {
               </Button>
 
               {/* Shopping Cart */}
-              <Button variant="outline" size="sm" className="border-gray-600 text-white hover:bg-gray-800">
+              <button className="text-white hover:text-gray-300 transition-colors">
                 <ShoppingCart className="h-4 w-4" />
-              </Button>
+              </button>
             </div>
           </div>
         </div>

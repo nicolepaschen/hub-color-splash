@@ -1,4 +1,4 @@
-import { Phone, MapPin } from "lucide-react";
+import { Phone } from "lucide-react";
 
 const Footer = () => {
   const footerSections = {
@@ -46,14 +46,10 @@ const Footer = () => {
         {/* Contact Information */}
         <div className="mb-8">
           <div className="text-2xl font-bold text-primary mb-4">Web Hosting Hub</div>
-          <div className="grid md:grid-cols-2 gap-4 text-sm text-muted-foreground">
+          <div className="text-sm text-muted-foreground">
             <div className="flex items-center space-x-2">
               <Phone className="h-4 w-4" />
               <span>1-800-555-0123</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <MapPin className="h-4 w-4" />
-              <span>123 Web Street, Internet City, IC 12345</span>
             </div>
           </div>
         </div>
@@ -83,7 +79,7 @@ const Footer = () => {
         <div className="pt-8 border-t border-border">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-sm text-muted-foreground">
-              © 2024 Web Hosting Hub. All rights reserved.
+              © 2025 Web Hosting Hub. All rights reserved.
             </div>
             <div className="flex flex-wrap justify-center md:justify-end space-x-4 text-sm">
               <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
