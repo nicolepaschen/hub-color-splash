@@ -12,65 +12,73 @@ const HeroSection = () => {
   ];
 
   return (
-    <section className="relative bg-gradient-to-br from-primary to-primary-hover text-primary-foreground py-16 lg:py-24">
-      <div className="container mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+    <section className="relative gradient-hero text-white py-24 overflow-hidden">
+      {/* Modern decorative elements */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-20 left-10 w-72 h-72 bg-white rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-secondary rounded-full blur-3xl"></div>
+      </div>
+      
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Content */}
-          <div className="space-y-6">
-            <div className="space-y-4">
-              <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
-                Best Website Hosting
+          <div className="space-y-8">
+            <div className="space-y-6">
+              <h1 className="text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
+                Best Website <span className="text-secondary">Hosting</span>
               </h1>
-              <h2 className="text-xl lg:text-2xl font-medium opacity-90">
+              <h2 className="text-2xl lg:text-3xl font-semibold text-white/90">
                 Do What You Love, Leave The Rest To Us
               </h2>
             </div>
 
             {/* Feature List */}
-            <ul className="space-y-3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {features.map((feature) => (
-                <li key={feature} className="flex items-center space-x-3">
+                <div key={feature} className="flex items-center space-x-3 bg-white/10 backdrop-blur-sm rounded-xl px-4 py-3">
                   <Check className="h-5 w-5 text-secondary" />
-                  <span className="text-lg">{feature}</span>
-                </li>
+                  <span className="text-lg font-medium">{feature}</span>
+                </div>
               ))}
-            </ul>
-
-            {/* Pricing */}
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 space-y-4">
-              <div className="flex items-center space-x-3">
-                <Badge variant="secondary" className="text-sm font-bold">
-                  50% OFF
-                </Badge>
-                <span className="text-sm opacity-80">Limited Time Offer</span>
-              </div>
-              
-              <div className="flex items-baseline space-x-3">
-                <span className="text-3xl lg:text-4xl font-bold">$5.99</span>
-                <span className="text-lg">/mo</span>
-                <span className="text-lg line-through opacity-60">$11.99</span>
-              </div>
-              
-              <p className="text-sm opacity-80">Starting price - billed annually</p>
             </div>
 
-            {/* CTA Button */}
-            <Button 
-              size="lg" 
-              variant="secondary"
-              className="text-lg px-8 py-6 font-semibold"
-            >
-              Get Started Now
-            </Button>
+            {/* Pricing */}
+            <div className="bg-white/15 backdrop-blur-sm rounded-2xl p-8 inline-block border border-white/20 shadow-modern-xl">
+              <div className="flex items-center space-x-4 mb-6">
+                <Badge variant="secondary" className="text-sm font-bold px-4 py-2 shadow-lg">
+                  🎉 50% OFF
+                </Badge>
+                <span className="text-white/70 text-sm">Limited Time Offer</span>
+              </div>
+              
+              <div className="flex items-baseline space-x-3 mb-4">
+                <span className="text-4xl lg:text-5xl font-bold text-secondary">$5.99</span>
+                <span className="text-xl">/mo</span>
+                <span className="text-xl line-through opacity-60">$11.99</span>
+              </div>
+              
+              <p className="text-white/80 mb-6">Starting price - billed annually</p>
+
+              <Button 
+                size="lg" 
+                className="gradient-secondary hover:shadow-glow text-white px-10 py-4 text-xl font-bold btn-modern w-full"
+              >
+                Get Started Now 🚀
+              </Button>
+            </div>
           </div>
 
           {/* Hero Image */}
           <div className="relative">
+            <div className="absolute -inset-4 bg-white/20 rounded-3xl blur-xl"></div>
             <img 
               src={heroImage} 
               alt="Businesses with satisfied customers using web hosting services"
-              className="w-full h-auto rounded-lg shadow-2xl"
+              className="relative w-full h-auto rounded-2xl shadow-modern-xl border-4 border-white/30"
             />
+            <div className="absolute -bottom-6 -right-6 bg-secondary text-white px-6 py-3 rounded-2xl font-bold shadow-modern-lg">
+              ⭐ 99.9% Uptime
+            </div>
           </div>
         </div>
       </div>

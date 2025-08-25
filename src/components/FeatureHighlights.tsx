@@ -45,25 +45,25 @@ const FeatureHighlights = () => {
   ];
 
   return (
-    <section className="py-16 bg-accent">
+    <section className="py-20 bg-gradient-to-br from-background to-muted">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
-            Everything You Need to Succeed Online
+        <div className="text-center mb-16">
+          <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+            Everything You Need to <span className="text-gradient">Succeed Online</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Get all the essential tools and features to build, grow, and manage your website with confidence.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {features.map((feature, index) => (
-            <div key={index} className="bg-card rounded-lg p-6 text-center hover:shadow-lg transition-shadow">
-              <div className="inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-lg mb-4">
-                <feature.icon className="h-6 w-6 text-primary" />
+            <div key={index} className="card-modern p-8 text-center card-hover group">
+              <div className="w-20 h-20 gradient-primary rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:shadow-glow transition-all duration-300">
+                <feature.icon className="w-10 h-10 text-white" />
               </div>
-              <h3 className="font-semibold text-foreground mb-2">{feature.title}</h3>
-              <p className="text-sm text-muted-foreground">{feature.subtitle}</p>
+              <h3 className="font-bold text-xl text-card-foreground mb-3">{feature.title}</h3>
+              <p className="text-muted-foreground font-medium">{feature.subtitle}</p>
             </div>
           ))}
         </div>
