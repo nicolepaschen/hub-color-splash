@@ -44,7 +44,7 @@ const Footer = () => {
       <div className="container mx-auto px-4 py-12">
         {/* Contact Information */}
         <div className="mb-8">
-          <div className="text-4xl font-bold text-primary mb-4">Web Hosting Hub</div>
+          <div className="text-xl font-bold text-primary mb-4">Web Hosting Hub</div>
           <div className="text-sm text-muted-foreground">
             <div className="flex items-center space-x-2">
               <Phone className="h-4 w-4" />
