@@ -69,12 +69,16 @@ const PricingTable = () => {
 
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {plans.map((plan, index) => (
-            <Card key={index} className={`relative ${plan.popular ? 'ring-2 ring-primary shadow-lg' : ''}`}>
+            <Card key={index} className={`relative flex flex-col h-full ${plan.popular ? 'ring-2 ring-primary shadow-lg' : ''}`}>
               {plan.popular && (
                 <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-secondary">
                   Most Popular
                 </Badge>
               )}
+              
+              <Badge variant="secondary" className="absolute top-4 right-4 text-xs">
+                50% OFF
+              </Badge>
               
               <CardHeader className="text-center pb-4">
                 <CardTitle className="text-2xl font-bold">{plan.name}</CardTitle>
@@ -85,13 +89,12 @@ const PricingTable = () => {
                   </div>
                   <div className="flex items-center justify-center space-x-2 mt-1">
                     <span className="text-sm line-through text-muted-foreground">{plan.originalPrice}</span>
-                    <Badge variant="secondary" className="text-xs">50% OFF</Badge>
                   </div>
                 </div>
               </CardHeader>
 
-              <CardContent>
-                <ul className="space-y-3 mb-6">
+              <CardContent className="flex-1 flex flex-col">
+                <ul className="space-y-3 mb-6 flex-1">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center space-x-3">
                       <Check className="h-4 w-4 text-success flex-shrink-0" />
@@ -101,7 +104,7 @@ const PricingTable = () => {
                 </ul>
 
                 <Button 
-                  className="w-full" 
+                  className="w-full mt-auto" 
                   variant={plan.popular ? "default" : "outline"}
                   size="lg"
                 >
