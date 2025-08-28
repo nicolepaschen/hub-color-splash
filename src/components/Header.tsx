@@ -66,7 +66,7 @@ const Header = () => {
               {navigationLinks.map((link) => (
                 <a 
                   key={link}
-                  href="#" 
+                  href={link === "Plans & Pricing" ? "/plans-pricing" : "#"} 
                   className="text-foreground hover:text-primary transition-colors font-medium"
                 >
                   {link}
