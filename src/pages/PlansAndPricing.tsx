@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Check, X } from "lucide-react";
 
 const PlansAndPricing = () => {
@@ -198,7 +199,8 @@ const PlansAndPricing = () => {
               </p>
             </div>
 
-            <div className="max-w-6xl mx-auto overflow-x-auto">
+            {/* Desktop Table */}
+            <div className="hidden lg:block max-w-6xl mx-auto">
               <table className="w-full border-collapse bg-background rounded-lg shadow-sm">
                 <thead>
                   <tr className="border-b border-border">
@@ -237,6 +239,53 @@ const PlansAndPricing = () => {
                   ))}
                 </tbody>
               </table>
+            </div>
+
+            {/* Mobile Accordion */}
+            <div className="lg:hidden max-w-2xl mx-auto">
+              <Accordion type="multiple" className="w-full">
+                {comparisonFeatures.map((feature, index) => (
+                  <AccordionItem key={index} value={`item-${index}`} className="border border-border rounded-lg mb-4">
+                    <AccordionTrigger className="px-4 py-3 hover:no-underline">
+                      <span className="font-medium text-left">{feature.name}</span>
+                    </AccordionTrigger>
+                    <AccordionContent className="px-4 pb-4">
+                      <div className="space-y-3">
+                        <div className="flex justify-between items-center py-2 border-b border-border">
+                          <span className="font-medium">Spark</span>
+                          <span className="flex items-center">
+                            {typeof feature.spark === 'boolean' ? (
+                              feature.spark ? <Check className="h-4 w-4 text-green-500" /> : <X className="h-4 w-4 text-red-500" />
+                            ) : (
+                              feature.spark
+                            )}
+                          </span>
+                        </div>
+                        <div className="flex justify-between items-center py-2 border-b border-border bg-primary/5 -mx-4 px-4 rounded">
+                          <span className="font-medium">Nitro</span>
+                          <span className="flex items-center">
+                            {typeof feature.nitro === 'boolean' ? (
+                              feature.nitro ? <Check className="h-4 w-4 text-green-500" /> : <X className="h-4 w-4 text-red-500" />
+                            ) : (
+                              feature.nitro
+                            )}
+                          </span>
+                        </div>
+                        <div className="flex justify-between items-center py-2">
+                          <span className="font-medium">Dynamo</span>
+                          <span className="flex items-center">
+                            {typeof feature.dynamo === 'boolean' ? (
+                              feature.dynamo ? <Check className="h-4 w-4 text-green-500" /> : <X className="h-4 w-4 text-red-500" />
+                            ) : (
+                              feature.dynamo
+                            )}
+                          </span>
+                        </div>
+                      </div>
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
             </div>
           </div>
         </section>
