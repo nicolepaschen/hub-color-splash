@@ -1,5 +1,6 @@
 import { ShoppingCart, Phone, MessageCircle, Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const navigationLinks = [
@@ -56,9 +57,9 @@ const Header = () => {
           <div className="flex items-center justify-between">
             {/* Logo */}
             <div className="flex items-center">
-              <div className="text-2xl font-bold text-primary">
+              <Link to="/" className="text-2xl font-bold text-primary hover:text-primary/80 transition-colors">
                 Web Hosting Hub
-              </div>
+              </Link>
             </div>
 
             {/* Desktop Navigation */}
