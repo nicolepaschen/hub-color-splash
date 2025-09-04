@@ -70,10 +70,10 @@ const Testimonials = () => {
           >
             <CarouselContent>
               {testimonials.map((testimonial, index) => (
-                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3 flex">
-                  <div className="p-1 flex w-full">
-                    <Card className="h-full w-full flex flex-col">
-                      <CardContent className="p-6 flex flex-col justify-between h-full">
+                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                  <div className="p-1">
+                    <Card className="h-full">
+                      <CardContent className="p-6">
                         <div className="flex items-center space-x-1 mb-4">
                           {[...Array(testimonial.rating)].map((_, i) => (
                             <Star key={i} className="h-4 w-4 fill-secondary text-secondary" />
