@@ -1,8 +1,11 @@
-import { ShoppingCart, Phone, MessageCircle, Menu } from "lucide-react";
+import { ShoppingCart, Phone, MessageCircle, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const Header = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  
   const navigationLinks = [
     "Hosting Features",
     "Plans & Pricing", 
@@ -11,6 +14,10 @@ const Header = () => {
     "Website Builder",
     "About"
   ];
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
 
   return (
     <header className="w-full sticky top-0 z-50">
@@ -75,13 +82,57 @@ const Header = () => {
               ))}
             </nav>
 
-            {/* Mobile Menu */}
-            <Button variant="outline" size="sm" className="lg:hidden">
-              <Menu className="h-4 w-4" />
+            {/* Mobile Menu Button */}
+            <Button 
+              variant="outline" 
+              size="sm" 
+              className="lg:hidden"
+              onClick={toggleMobileMenu}
+              aria-label="Toggle mobile menu"
+            >
+              {isMobileMenuOpen ? (
+                <X className="h-4 w-4" />
+              ) : (
+                <Menu className="h-4 w-4" />
+              )}
             </Button>
           </div>
         </div>
       </div>
+
+      {/* Mobile Menu */}
+      {isMobileMenuOpen && (
+        <div className="lg:hidden bg-background border-b border-border">
+          <div className="container mx-auto px-4 py-4">
+            <nav className="flex flex-col space-y-4">
+              {navigationLinks.map((link) => (
+                <a 
+                  key={link}
+                  href={link === "Plans & Pricing" ? "/plans-pricing" : "#"} 
+                  className="text-foreground hover:text-primary transition-colors font-medium py-2 border-b border-border/50 last:border-b-0"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  {link}
+                </a>
+              ))}
+              
+              {/* Mobile-only links */}
+              <div className="pt-4 border-t border-border/50">
+                <a href="#" className="block text-foreground hover:text-primary transition-colors font-medium py-2">
+                  Help Center
+                </a>
+                <a href="#" className="block text-foreground hover:text-primary transition-colors font-medium py-2">
+                  Login
+                </a>
+                <Button variant="secondary" size="sm" className="mt-2 w-full justify-center">
+                  <MessageCircle className="h-4 w-4 mr-2" />
+                  Chat Now
+                </Button>
+              </div>
+            </nav>
+          </div>
+        </div>
+      )}
     </header>
   );
 };
