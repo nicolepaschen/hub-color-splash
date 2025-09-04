@@ -66,7 +66,7 @@ const Testimonials = () => {
               align: "start",
               loop: true,
             }}
-            className="w-full"
+            className="w-full relative"
           >
             <CarouselContent>
               {testimonials.map((testimonial, index) => (
@@ -94,16 +94,17 @@ const Testimonials = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            {/* Desktop arrows - hidden on mobile */}
+            
+            {/* Navigation arrows */}
             <CarouselPrevious className="hidden md:flex" />
             <CarouselNext className="hidden md:flex" />
+            
+            {/* Mobile arrows positioned below */}
+            <div className="flex md:hidden justify-center space-x-4 mt-6">
+              <CarouselPrevious className="static translate-x-0 translate-y-0" />
+              <CarouselNext className="static translate-x-0 translate-y-0" />
+            </div>
           </Carousel>
-          
-          {/* Mobile arrows - positioned below carousel */}
-          <div className="flex justify-center space-x-4 mt-6 md:hidden">
-            <CarouselPrevious className="static translate-x-0 translate-y-0" />
-            <CarouselNext className="static translate-x-0 translate-y-0" />
-          </div>
         </div>
       </div>
     </section>
