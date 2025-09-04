@@ -14,7 +14,7 @@ const FeatureHighlights = () => {
     },
     {
       icon: Shield,
-      title: "FREE Domain",
+      title: "Free Domain",
       subtitle: "Choose a domain name that fits your business. Sign up today to get a free domain credit."
     },
     {
@@ -41,7 +41,7 @@ const FeatureHighlights = () => {
     },
     {
       icon: Shield,
-      title: "FREE SSL",
+      title: "Free SSL",
       subtitle: "Sign up today for a free SSL certificate. Show your visitors that your site is trustworthy."
     },
     {
