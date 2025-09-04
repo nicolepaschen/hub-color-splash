@@ -94,9 +94,16 @@ const Testimonials = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
+            {/* Desktop arrows - hidden on mobile */}
+            <CarouselPrevious className="hidden md:flex" />
+            <CarouselNext className="hidden md:flex" />
           </Carousel>
+          
+          {/* Mobile arrows - positioned below carousel */}
+          <div className="flex justify-center space-x-4 mt-6 md:hidden">
+            <CarouselPrevious className="static translate-x-0 translate-y-0" />
+            <CarouselNext className="static translate-x-0 translate-y-0" />
+          </div>
         </div>
       </div>
     </section>
