@@ -13,7 +13,7 @@ const Testimonials = () => {
     {
       name: "Sarah Johnson",
       company: "Bloom Bakery",
-      content: "Web Hosting Hub made it incredibly easy to get my bakery's website online. The support team was amazing and helped me every step of the way.",
+      content: "Web Hosting Hub made it incredibly easy to get my bakery's website online. The support team was amazing every step of the way.",
       rating: 5
     },
     {
