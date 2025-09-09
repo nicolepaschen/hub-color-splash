@@ -5,10 +5,10 @@ import heroImage from "@/assets/hero-businesses.jpg";
 
 const HeroSection = () => {
   const features = [
-    "No Technical Skills Required",
+    "No Tech Skills Required",
     "Make a Beautiful Website", 
     "Sell Your Products Online",
-    "Grow Your Audience"
+    "Grow Your Web Audience"
   ];
 
   return (
